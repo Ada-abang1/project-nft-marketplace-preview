@@ -15,18 +15,18 @@ body{
 
 /*<!--############## CONTAINER #############-->*/
 .container{
-	padding: 30px;
+	padding: 2rem;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
 	gap: 1rem;
 }
-
+/*<!--############## RESPONSIVE / MOBILE QUERY #############-->*/
 @media (max-width: 768px){
 .container {
 	padding: 15px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-	gap: .75rem;
+	gap: 1.5rem;
 }
 }
 /*<!--############## CARD #############-->*/
@@ -35,11 +35,19 @@ body{
 	background-color: #585b5e;
 	border-radius: 10px;
 	overflow: hidden;
+	box-shadow: 2px 10px 20px  rgba(0, 0, 0, 0.5); 
+	
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	z-index: 1000;
+}
+.card:hover{
 
+transform:  translateY(-8px);
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 /*<!--############## IMAGE #############-->*/
  .nft_image{
- 
 	width:100%;
 	object-fit: cover;
 	object-position: center;
@@ -48,6 +56,7 @@ body{
 
 /*<!--############## DESC #############-->*/
 .nft_desc{
+	padding: 10px;
 	margin-top: 10px;
 	border-bottom: 1px solid #ccc;
 }
@@ -100,6 +109,7 @@ body{
 
 /*<!--############## FOOTER #############-->*/
 .footer{
+	padding: 10px;
 	display: flex;
 	align-content: center;
 }
